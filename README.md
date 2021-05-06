@@ -1,3 +1,21 @@
+照著保哥的Angular的教學做的
+
+有些地方應該是因為跟舊版不同，所以我有改寫
+例如:
+article-header.component.html
+保哥影片使用
+(keyup.enter)="item.title = $event"
+(keyup.escape)="$event = item.title"
+
+我改寫成:
+(keyup.enter)="item.title = $any($event.target).value"
+(keyup.escape)="$any($event.target).value = item.title"
+
+
+F1 => format document
+
+
+
 # Demo1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
